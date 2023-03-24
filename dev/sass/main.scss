@@ -1,0 +1,27 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-areas: "sidemenu content";
+    grid-template-columns: 306px auto;
+}
+
+.sidemenu {
+    grid-area: sidemenu;
+    padding: 0 28px;
+}
+
+.content {
+    grid-area: content;
+    background: $primary-color;
+    height: 100vh;
+    padding: 0 71px;
+}
+
+.sidemenu, .content {
+    padding-top: 41px;
+}
