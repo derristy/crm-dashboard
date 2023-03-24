@@ -6,6 +6,8 @@ $(document).ready(function () {
 });
 
 let dropdown = document.querySelectorAll(".dropdown");
+let toggler = document.querySelector(".toggler");
+let sidemenu = document.querySelector(".sidemenu");
 
 dropdown.forEach(element => {
     element.addEventListener("click", (event) => {
@@ -21,3 +23,8 @@ dropdown.forEach(element => {
         event.stopPropagation();
     });
 });
+
+toggler.addEventListener("click", (event) => {
+    sidemenu.classList.toggle("show");
+    toggler.querySelector(".toggler-icon").classList.toggle("show");
+})

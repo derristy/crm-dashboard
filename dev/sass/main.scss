@@ -10,7 +10,8 @@ body {
     background: $primary-color;
     display: grid;
     grid-template-areas: "sidemenu content";
-    grid-template-columns: fit-content(30%);
+    grid-template-columns: 306px auto;
+    position: relative;
 }
 
 .sidemenu {
@@ -20,12 +21,18 @@ body {
     display: flex;
     flex-direction: column;
     overflow: auto;
+    transition: transform .3s;
+
+    &.show {
+        transform: translateX(0);
+    }
 }
 
 .content {
     grid-area: content;
     padding: 0 71px;
     overflow: auto;
+    position: relative;
 }
 
 .sidemenu, .content {
@@ -44,7 +51,7 @@ body {
     display: flex;
     align-items: center;
     text-decoration: none;
-    margin-bottom: 65px;
+    margin-bottom: 68px;
     
     &-title {
         margin-left: 11px;
@@ -58,7 +65,7 @@ body {
         margin-left: 4px;
         font-weight: 500;
         font-size: 10px;
-        line-height: 15px;
+        line-height: 18px;
         color: $color1;
     }
 }
@@ -302,4 +309,55 @@ table.dataTable tbody th, table.dataTable tbody td {
     background: $color-blue;
     color: $color-white !important;
     border-color: $color-blue;
+}
+
+.toggler {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 20px;
+    display: none;
+    z-index: 110;
+
+    &-icon {
+        width: 30px;
+        background: $color-dark;
+        height: 2px;
+        display: block;
+        position: relative;
+
+        &:before {
+            content: "";
+            width: 30px;
+            background: $color-dark;
+            height: 2px;
+            position: absolute;
+            top: 8px;
+            transition: transform .3s;
+        }
+
+        &:after {
+            content: "";
+            width: 30px;
+            background: $color-dark;
+            height: 2px;
+            position: absolute;
+            bottom: 8px;
+            transition: transform .3s;
+        }
+    }
+
+    &-icon.show {
+        background: transparent;
+
+        &:before {
+            transform: rotate(45deg);
+            top: 0;
+        }
+
+        &:after {
+            transform: rotate(-45deg);
+            bottom: 0;
+        }
+    }
 }
