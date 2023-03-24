@@ -90,14 +90,32 @@ body {
 .nav-item:last-child {
   margin-bottom: 0;
 }
+.nav-item .arrow svg {
+  transition: transform 0.3s;
+}
 .nav-item.active {
   background: #5932EA;
 }
 .nav-item.active .nav-link {
   color: #fff;
 }
+.nav-item.active svg .fill-stroke {
+  stroke: #fff;
+}
+.nav-item.active svg .fill {
+  fill: #fff;
+}
+.nav-item.active .arrow svg {
+  transform: rotate(91deg);
+}
+.nav-item.active .arrow svg .fill-stroke {
+  stroke: #fff;
+}
 .nav-item.active .dropdown-menu {
   display: flex;
+}
+.nav-item.active .dropdown-link {
+  color: #fff;
 }
 .nav-link {
   margin-left: 14px;

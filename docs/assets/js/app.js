@@ -2,11 +2,11 @@ let dropdown = document.querySelectorAll(".dropdown");
 
 dropdown.forEach(element => {
     element.addEventListener("click", (event) => {
-        if(document.querySelectorAll(".dropdown.active").length >= 1){
-            dropdown.forEach(element => {
+        document.querySelectorAll(".dropdown.active").forEach((element) => {
+            if(element != event.target.closest(".dropdown.active")){
                 element.classList.remove("active");
-            });
-        }
+            }
+        });
         element.classList.toggle("active");
     });
     

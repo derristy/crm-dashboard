@@ -76,6 +76,10 @@ body {
             margin-bottom: 0;
         }
 
+        & .arrow svg {
+            transition: transform .3s;
+        }
+
         &.active {
             background: $color-blue;
 
@@ -83,9 +87,29 @@ body {
                 color: $color-white;
             }
 
+            & svg .fill-stroke {
+                stroke: $color-white;
+            }
+
+            & svg .fill {
+                fill: $color-white;
+            }
+
+            & .arrow svg {
+                transform: rotate(91deg);
+            }
+
+            & .arrow svg .fill-stroke {
+                stroke: $color-white;
+            }
+
             .dropdown {
                 &-menu {
                     display: flex;
+                }
+
+                &-link {
+                    color: $color-white;
                 }
             }
         }
