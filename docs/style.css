@@ -123,6 +123,7 @@ body {
 }
 .nav-item.active .dropdown-link {
   color: #fff;
+  padding: 10px 40px;
 }
 .nav-link {
   margin-left: 14px;
@@ -364,6 +365,11 @@ table.dataTable tbody th, table.dataTable tbody td {
   }
   .table {
     padding: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .sidemenu {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

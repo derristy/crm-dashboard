@@ -8,6 +8,7 @@ $(document).ready(function () {
 let dropdown = document.querySelectorAll(".dropdown");
 let toggler = document.querySelector(".toggler");
 let sidemenu = document.querySelector(".sidemenu");
+let dropdownLink = document.querySelectorAll(".dropdown-menu .dropdown-link");
 
 dropdown.forEach(element => {
     element.addEventListener("click", (event) => {
@@ -18,8 +19,10 @@ dropdown.forEach(element => {
         });
         element.classList.toggle("active");
     });
-    
-    element.querySelector(".dropdown-menu").addEventListener("click", (event) => {
+});
+
+dropdownLink.forEach(element => {
+    element.addEventListener("click", (event) => {
         event.stopPropagation();
     });
 });
