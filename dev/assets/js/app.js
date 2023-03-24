@@ -1,3 +1,10 @@
+$(document).ready(function () {
+    $('#table').DataTable({
+        lengthChange: false,
+        pageLength: 8
+    });
+});
+
 let dropdown = document.querySelectorAll(".dropdown");
 
 dropdown.forEach(element => {

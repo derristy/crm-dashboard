@@ -48,6 +48,7 @@ body {
 
 .sidemenu, .content {
   padding-top: 41px;
+  min-height: 100vh;
   max-height: 100vh;
 }
 
@@ -164,5 +165,130 @@ body {
 .dropdown-link {
   color: #9197B3;
   text-decoration: none;
+}
+
+.welcome {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 51px;
+}
+
+.table {
+  background: #fff;
+  border-radius: 30px;
+  padding: 40px;
+  margin-bottom: 30px;
+  overflow: auto;
+  position: relative;
+}
+.table-title {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 33px;
+}
+.table-subtitle {
+  color: #16C098;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.sorting {
+  color: #B5B7C0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  padding-bottom: 14px;
+}
+
+table.dataTable thead th, table.dataTable thead td {
+  border-color: #EEEEEE;
+}
+
+.dataTables_filter label {
+  position: relative;
+}
+
+.dataTables_filter label input[type=search] {
+  background-image: url(assets/images/search.png);
+  background-color: #F9FBFF;
+  background-repeat: no-repeat;
+  background-position: 10px 7px;
+  padding: 12px 0 11px 47px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.dataTables_filter label input[type=search]:focus {
+  outline: none;
+}
+
+.dataTables_filter label input[type=search]::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #B5B7C0;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+table.dataTable.no-footer {
+  border-bottom: none;
+}
+
+tbody td {
+  border-bottom: 1px solid #EEEEEE;
+}
+
+table.dataTable tbody th, table.dataTable tbody td {
+  padding: 24px 0;
+}
+
+.dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_paginate {
+  padding-top: 32px;
+}
+
+.td-active {
+  background: rgba(22, 192, 152, 0.3803921569);
+  padding: 4px 18px;
+  border: 1px solid #00B087;
+  font-family: "Poppins", sans-serif;
+  color: #008767;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  border-radius: 4px;
+  width: 100%;
+}
+.td-inactive {
+  padding: 4px 12px;
+  background: #FFC5C5;
+  border: 1px solid #DF0404;
+  width: 100%;
+  color: #DF0404;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  padding: 6px 10px;
+  background: #F5F5F5;
+  border-radius: 4px;
+  margin-right: 12px;
+  color: #404B52 !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+  background: red;
+  border-color: red;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  background: #5932EA;
+  color: #fff !important;
+  border-color: #5932EA;
 }
 /*# sourceMappingURL=style.css.map */
